@@ -1,0 +1,9 @@
+[master-node]
+192.168.128.53
+
+[worker-node]
+192.168.128.51
+
+[kube-node:children]
+master-node
+worker-node

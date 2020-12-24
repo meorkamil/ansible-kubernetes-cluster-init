@@ -1,0 +1,4 @@
+---
+# defaults file for kubernetes-cluster-init
+user: kubeadmin
+pod_cidr: 192.168.0.0/16

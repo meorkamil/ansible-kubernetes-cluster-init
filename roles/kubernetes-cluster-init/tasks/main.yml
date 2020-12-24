@@ -1,0 +1,14 @@
+---
+# tasks file for kubernetes-cluster-init
+- name: get the username running the deploy
+  become: false
+  local_action: command whoami
+  register: user_on_host
+
+- name: Master Setup
+  include_tasks: master-setup.yml
+  when: "'master-node' in group_names"
+
+- name: Node Setup
+  include_tasks: node-setup.yml
+  when: "'worker-node' in group_names"

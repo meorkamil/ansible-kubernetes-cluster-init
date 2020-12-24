@@ -1,0 +1,10 @@
+- name: Create ~/.kube
+  file:
+    state: directory
+    path: ~/.kube
+
+- name: Kubernetes admin.conf
+  copy:
+    src: /etc/kubernetes/admin.conf
+    dest: ~/.kube/config
+    remote_src: yes

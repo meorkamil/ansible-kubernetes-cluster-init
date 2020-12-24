@@ -1,0 +1,8 @@
+---
+# Under development
+- name: Kubernetes Initialization
+  hosts: kube-node #including master node
+  roles:
+    - role: kubernetes-cluster-init
+      user: kubeadmin # default user is kubeadmin
+      pod_cidr: 192.168.0.0/16 # default pod cidr is 192.168.0.0/16

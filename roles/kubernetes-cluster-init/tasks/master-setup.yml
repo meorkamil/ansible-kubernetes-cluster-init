@@ -1,0 +1,8 @@
+- name: Setup Master 
+  include_tasks: kube-init.yml
+
+- name: Kube config
+  include_tasks: kube-config.yml
+
+- name: Setup Pod Network
+  include_tasks: kube-pod-network.yml

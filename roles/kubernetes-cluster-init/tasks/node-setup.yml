@@ -1,0 +1,8 @@
+- name: Copy token file 
+  copy:
+    src: /home/{{ user_on_host.stdout }}/token.sh
+    dest: /home/{{ user }}/token.sh
+    mode: 777
+
+- name: Join node to Kubernetes master
+  shell: /home/{{ user }}/token.sh
