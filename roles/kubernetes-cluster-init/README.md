@@ -50,4 +50,4 @@ inventory:
 
 ## Author Information
 
-MK (Meor Muhammad Kamil).
+Algojo (Meor Muhammad Kamil).

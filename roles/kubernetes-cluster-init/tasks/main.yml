@@ -5,6 +5,11 @@
   local_action: command whoami
   register: user_on_host
 
+- name: Add /etc/hosts
+  template: 
+    src: templates/hosts.j2
+    dest: /etc/hosts
+    
 - name: Master Setup
   include_tasks: master-setup.yml
   when: "'master-node' in group_names"
